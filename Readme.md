@@ -17,7 +17,7 @@ and to run server, client and manager instance properly, you need to follow our 
 *server_config.yml* and *manager_config.yml* under the same directory.
 
 Second, you must start a manager instance on the manager machine by running:
-> python manager_cli,py
+> python manager_cli.py
 
 After you start the manager instance, you can see manager's ipv4 address in the terminal, change the **MANAGER_ADDR_IPV4** in
 *client/config/client_config.yml* on the client machine and *server/config/server_config.yml* on the server machines to make sure

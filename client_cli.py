@@ -41,7 +41,7 @@ if __name__ == '__main__':
     # TODO: change filename to the real file type (ref: requests.header)
 
     client = ClientDaemon(url=url,
-                          client_addr_ipv4=client_addr_ipv4,
+                          client_addr_ipv4=config['CLIENT_ADDR_IPV4'],
                           to_server_port=config['TO_SERVER_PORT'],
                           to_manager_port=config['TO_MANAGER_PORT'],
                           final_file_path=config['TARGET_DIR'] + filename,

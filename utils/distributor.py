@@ -30,8 +30,9 @@ class MyDistributor:
         interval_list = [[0] * 2 for _ in range(number_of_parts)]
         for i in range(number_of_parts):
             if i == 0:
-                interval_list[i][1] = size_list[0] - 1
+                interval_list[i][0] = left_point
+                interval_list[i][1] = size_list[0] - 1 + left_point
             else:
-                interval_list[i][0] = size_list[i-1]
-                interval_list[i][1] = size_list[i] - 1
+                interval_list[i][0] = size_list[i-1] + left_point
+                interval_list[i][1] = size_list[i] - 1 + left_point
         return interval_list

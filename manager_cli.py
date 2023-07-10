@@ -15,5 +15,5 @@ if __name__ == "__main__":
                                      if not ip.startswith("127.")][:1],
                                     [[(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close())
                                       for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) if l][0][0]
-    manager = ManagerDaemon(manager_addr_ipv4=manager_addr_ipv4, listen_port=config['MANAGER_PORT'])
+    manager = ManagerDaemon(manager_addr_ipv4=config['MANAGER_ADDR_IPV4'], listen_port=config['MANAGER_PORT'])
     manager.listen()

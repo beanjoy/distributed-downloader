@@ -32,7 +32,7 @@ if __name__ == "__main__":
                                      if not ip.startswith("127.")][:1],
                                     [[(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close())
                                       for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) if l][0][0]
-    server = ServerDaemon(server_addr_ipv4=server_addr_ipv4,
+    server = ServerDaemon(server_addr_ipv4=config['SERVER_ADDR_IPV4'],
                           to_client_port=config['TO_CLIENT_PORT'],
                           to_manager_port=config['TO_MANAGER_PORT'],
                           thread_number=config['THREADS_NUM'],
